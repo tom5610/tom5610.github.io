@@ -1,15 +1,14 @@
 ---
+layout: post
 title: "Building Clip Buddy with Claude Code"
 source: "https://medium.com/@tom.5610/building-clip-buddy-with-claude-code-3dc078b068b4"
-author:
-  - "[[Tom Liu]]"
-published: 2026-04-06
-created: 2026-05-03
+author: Tom Liu
+date: 2026-04-06
 description: "More"
 tags:
   - "clippings"
 ---
-> This blog shares my experience building [Clip Buddy](https://github.com/tom5610/clip-buddy), backed by Lenny and Boris’s awesome podcast — [Head of Claude Code: What happens after coding is solved | Boris Cherny](https://www.youtube.com/watch?v=We7BZVKbCVw).
+> This blog shares my experience building [Clip Buddy](https://github.com/tom5610/clip-buddy), backed by Lenny and Boris’s awesome podcast — [Head of Claude Code: What happens after coding is solved - Boris Cherny](https://www.youtube.com/watch?v=We7BZVKbCVw).
 > 
 > [Clip Buddy](https://github.com/tom5610/clip-buddy) takes any video URL, extracts the audio, transcribes it, and produces structured analysis — key arguments, speaker identification, and an interactive chat for deep-diving into specific topics.
 

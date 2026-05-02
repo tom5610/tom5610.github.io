@@ -17,5 +17,13 @@ author:
 plugins:
   - jekyll-paginate
 
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
 # Custom vars
 version:             1.0.0
