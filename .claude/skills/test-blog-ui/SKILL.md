@@ -5,7 +5,7 @@ description: Run UI tests on the Jekyll blog using Playwright MCP tools. Verifie
 
 # Blog UI Testing Skill
 
-Run visual and structural UI tests on the local Jekyll blog at `http://localhost:4000` using the Playwright MCP browser tools. Follow these steps in order.
+Run visual and structural UI tests on the local Jekyll blog at `http://localhost:4000` using the Playwright MCP browser tools. Save all screenshots to the `.playwright-mcp/` directory. Follow these steps in order.
 
 ## Step 0: Ensure Server Is Running
 
@@ -32,7 +32,7 @@ Then poll `curl -s --max-time 1 http://localhost:4000` every 2 seconds, up to 30
    - There is at least one post listing with a title (link text inside a heading), a date string, and excerpt text
    - A pagination area exists (text like "Older" or "Newer")
 4. Use `browser_console_messages` and check for any errors (level "error"). Warnings are acceptable.
-5. Use `browser_take_screenshot` to capture the home page for visual review.
+5. Use `browser_take_screenshot` with filename `.playwright-mcp/home-page.png`.
 
 Record pass/fail for each check.
 
@@ -51,7 +51,7 @@ Once on the post page:
    - The post body contains content (at least one subheading or paragraph of text)
    - If there are related posts, a "Related posts" section with links exists
 3. Use `browser_console_messages` and check for errors.
-4. Use `browser_take_screenshot` to capture the post page for visual review.
+4. Use `browser_take_screenshot` with filename `.playwright-mcp/post-page.png`.
 
 Record pass/fail for each check.
 
@@ -75,7 +75,7 @@ Output a structured report like this:
 - [PASS/FAIL] Related posts section (if applicable)
 - [PASS/FAIL] No JavaScript console errors
 
-Screenshots captured for visual review.
+Screenshots saved to .playwright-mcp/.
 ```
 
 ## Step 4: Cleanup

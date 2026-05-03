@@ -40,6 +40,9 @@ nbproject
 validation-status.json
 validation-report.json
 
+# Playwright MCP
+.playwright-mcp
+
 # Folders to ignore
 node_modules
 bower_components

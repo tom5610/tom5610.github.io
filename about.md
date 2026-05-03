@@ -13,8 +13,6 @@ The turning point came when my manager Krishna encouraged me to document my work
 
 I don't write because I've mastered it. I write because I haven't. At my level, quantity matters more than perfection. Every published piece is practice — a snapshot of who I was 3 to 6 months ago, and a marker of how far I've come. If something I share helps someone else along the way, even better.
 
-You can read more about this philosophy in [Writing — Part One of Learning from Public](https://medium.com/@tom.5610/learning-from-public-093a0dfd3213).
-
 ## BJJ
 
 In October 2024, at age 44, I walked into Gracie Barra Carlton and started training Brazilian Jiu-Jitsu. What began as a nudge from a persistent training partner became one of the most meaningful pursuits of my life.
