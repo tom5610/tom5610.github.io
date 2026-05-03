@@ -59,4 +59,5 @@ end
 Jekyll::Hooks.register :posts, :pre_render do |post|
   ObsidianCompat.fix_frontmatter(post.data)
   post.content = ObsidianCompat.transform(post.content)
+  post.excerpt.content = ObsidianCompat.transform(post.excerpt.content)
 end
