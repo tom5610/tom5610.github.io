@@ -34,7 +34,15 @@ module ObsidianCompat
     output.gsub!(CALLOUT) { |_| "#{$1}**#{$2.capitalize}:** #{$3}" }
     output.gsub!(PIPE_IN_LINK) { |_| "[#{$1.strip} - #{$2.strip}](#{$3})" }
     output.gsub!(WIKILINK_ALIASED) { |_| "[#{$2}](#{slugify($1)})" }
-    output.gsub!(WIKILINK_PLAIN) { |_| "[#{$1}](#{slugify($1)})" }
+    output.gsub!(WIKILINK_PLAIN) do |_|
+      target = $1
+      if target.start_with?('#')
+        heading = target[1..]
+        "[#{target}](##{slugify(heading)})"
+      else
+        "[#{target}](#{slugify(target)})"
+      end
+    end
 
     output
   end
