@@ -19,8 +19,7 @@ The idea is awesome; however, Andrej didn't share 'step-by-step' guidance. Other
 
 Here's a sneak peek before we dive in. Say you're reading Anthropic's engineering blog -  [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents), what if you could transform it into a wiki and navigate the key parts using Obsidian:
 
-![[obsidian-note-graph.png]]
-
+![[obsidian-note-output-example.png]]
 
 ---
 
