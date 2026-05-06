@@ -26,6 +26,7 @@ Optional fields:
 - `author` — string or array; Obsidian `[[brackets]]` are stripped by the plugin
 - `description` — string
 - `source` — URL string
+- `assets_dir` — subfolder name under `assets/` for post images (e.g., `building-second-brain` → `/assets/building-second-brain/`). Falls back to `/assets/` when omitted.
 
 The `created` field is automatically removed by the plugin. Do not use `date` directly — use `published`.
 
@@ -33,7 +34,7 @@ The `created` field is automatically removed by the plugin. Do not use `date` di
 
 The `obsidian_compat.rb` plugin transforms these patterns at build time:
 - `[[Page]]` and `[[Page|Alias]]` — wiki-links to markdown links
-- `![[image.png]]` — image embeds to `![](/assets/image.png)`
+- `![[image.png]]` — image embeds to `![](/assets/<assets_dir>/image.png)` (or `/assets/image.png` if no `assets_dir`)
 - `%%comment%%` — hidden comments stripped
 - `> [!note]` — callouts to bold blockquotes
 - `[text|more](url)` — pipe in link text to dash

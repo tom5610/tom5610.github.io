@@ -25,10 +25,11 @@ module ObsidianCompat
     title.strip.downcase.gsub(/\s+/, '-').gsub(/[^\w-]/, '')
   end
 
-  def self.transform(content)
+  def self.transform(content, assets_dir: nil)
     output = content.dup
 
-    output.gsub!(EMBED_IMAGE) { |_| "![](/assets/#{$1})" }
+    base = assets_dir ? "/assets/#{assets_dir}" : "/assets"
+    output.gsub!(EMBED_IMAGE) { |_| "![](#{base}/#{$1})" }
     output.gsub!(COMMENT, '')
     output.gsub!(CALLOUT) { |_| "#{$1}**#{$2.capitalize}:** #{$3}" }
     output.gsub!(PIPE_IN_LINK) { |_| "[#{$1.strip} - #{$2.strip}](#{$3})" }
@@ -56,8 +57,10 @@ module ObsidianCompat
   end
 end
 
-Jekyll::Hooks.register :posts, :pre_render do |post|
+Jekyll::Hooks.register :posts, :pre_render do |post, payload|
   ObsidianCompat.fix_frontmatter(post.data)
-  post.content = ObsidianCompat.transform(post.content)
-  post.excerpt.content = ObsidianCompat.transform(post.excerpt.content)
+  assets_dir = post.data['assets_dir']
+  post.content = ObsidianCompat.transform(post.content, assets_dir: assets_dir)
+  payload['post']['content'] = post.content if payload && payload['post']
+  post.excerpt.content = ObsidianCompat.transform(post.excerpt.content, assets_dir: assets_dir)
 end

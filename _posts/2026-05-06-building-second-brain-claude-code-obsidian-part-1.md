@@ -6,6 +6,9 @@ tags:
   - obsidian
   - llm-wiki
 description: Step-by-step guide to building a personal wiki knowledge base using Claude Code and Obsidian, inspired by Andrej Karpathy's llm-wiki.
+assets_dir: building-second-brain
+author:
+  - "[[Tom Liu]]"
 ---
 
 The bottleneck in my learning was never finding good content - it was the grunt work after reading it - summarizing, connecting ideas across articles, filing things where I'd actually find them again. I read technical blogs constantly, but I just… didn't do any of that. For years, knowledge entered, sparked something, and faded - scattered across browser tabs and half-started notes I'd never reopen.
