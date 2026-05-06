@@ -209,3 +209,8 @@ Part 2 will cover:
 The pipeline does the heavy lifting, but the learning still happens when you decide which connections matter, which concepts to dive deeper on, and what lens to bring.
 The tool builds the scaffolding - you build the **understanding**.
 
+## Reference Resources
+
+* [llm-wiki plugin](https://github.com/tom5610/llm-wiki/tree/main) - my curated llm-wiki skills
+* [llm-wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) gist - Andrej Karpathy's llm-wiki recipe
+* [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)
