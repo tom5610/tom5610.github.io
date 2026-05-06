@@ -12,10 +12,7 @@ title: Home
       </a>
     </h1>
 
-    {% assign words = post.content | number_of_words %}
-    {% assign minutes = words | divided_by: 200 %}
-    {% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
-    <span class="post-date">{{ post.date | date_to_string }} · {{ minutes }} min read</span>
+    <span class="post-date">{{ post.date | date_to_string }} · {{ post.reading_time }} min read</span>
 
     {{ post.excerpt }}
   </div>
